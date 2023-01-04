@@ -1,0 +1,33 @@
+
+:root {
+    --main-blue: #2f9dfb;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    text-align: center;
+    background-color: var(--main-blue);
+    margin-top: 0;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+button{
+    padding: 4px 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--main-blue);
+}
