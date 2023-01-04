@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a30afd10b9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
@@ -14,14 +17,18 @@
     </header>
     <div class="container">
         <div class="choiceResults">
-            <h2>Computer Choice: <span class="computer-choice" id="computer-choice"></span></h2>
-            <h2>User Choice: <span class="user-choice" id="user-choice"></span></h2>
+            <p><span class="computer-choice" id="computer-choice">❓</span></p>
+            <h2 class="versusDisplay">🆚</h2>
+            <p><span class="user-choice" id="user-choice">❓</span></p>
+        </div>
+        <div class="resultContainer">
             <h2>Result: <span class="result" id="result"></span></h2>
         </div>
         <div class="choiceButtons">
-            <button id="Rock">&#9994</button>
-            <button id="Paper">&#9995</button>
-            <button id="Scissors">&#9996</button>
+            <button id="✊">&#9994</button>
+            <button id="✋">&#9995</button>
+            <button id="✌">&#9996</button>
+            <p class="chooseText">⚔ Choose A Weapon ⚔</p>
         </div>
     </div>
     <footer>

@@ -14,16 +14,16 @@ possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('cli
 }))
 
 function gererateComputerChoice(){
-    const randomNumber = Math.floor(Math.random() * 3) + 1
+    const randomNumber = Math.floor(Math.random() * possibleChoices.length) + 1
 
     if (randomNumber === 1){
-        computerChoice = 'Rock'
+        computerChoice = computerChoiceDisplay.innerText = "✊"
     }
     if (randomNumber === 2){
-        computerChoice = 'Paper'
+        computerChoice = computerChoiceDisplay.innerText = "✋"
     }
     if (randomNumber === 3){
-        computerChoice = 'Scissors'
+        computerChoice = computerChoiceDisplay.innerText = "✌"
     }
     computerChoiceDisplay.innerHTML = computerChoice
 }
@@ -32,22 +32,10 @@ function getResult(){
     if (computerChoice === userChoice){
         result = 'Its a Draw!'
     }
-    if (computerChoice === 'Rock' && userChoice === 'Scissors'){
+    if (computerChoice === "✊" && userChoice === '✌' || computerChoice === '✋' && userChoice === '✊' || computerChoice === '✌' && userChoice === '✋'){
         result = 'You Lose!'
     }
-    if (computerChoice === 'Paper' && userChoice === 'Rock'){
-        result = 'You Lose!'
-    }
-    if (computerChoice === 'Scissors' && userChoice === 'Paper'){
-        result = 'You Lose!'
-    }
-    if (computerChoice === 'Rock' && userChoice === 'Paper'){
-        result = 'You Win!'
-    }
-    if (computerChoice === 'Paper' && userChoice === 'Scissors'){
-        result = 'You Win!'
-    }
-    if (computerChoice === 'Scissors' && userChoice === 'Rock'){
+    if (computerChoice === '✊' && userChoice === '✋' || computerChoice === '✋' && userChoice === '✌' || computerChoice === '✌' && userChoice === '✊'){
         result = 'You Win!'
     }
     resultDisplay.innerHTML = result
